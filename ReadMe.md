@@ -10,7 +10,13 @@ Here is a revised description of the steps involved:
 
 4. Transformation: Once the data is in the Parquet format, we perform the required transformations on it. This step involves using PySpark or other compatible tools to apply operations such as filtering, aggregations, joins, or any other transformations necessary to derive the desired output.
 
-5. Output from Parquet: After the transformations are complete, we obtain the transformed data from the Parquet format. This data can be used for further analysis, visualization, or downstream processing.
+   The operations performed :
+   1)Date format change (mm-dd-yyyy)to(yyyy-mm-dd)
+   2)concatenate data from two column to one column
+   3)split string from one column to two column
+   4)drop one or more columns
+
+10. Output from Parquet: After the transformations are complete, we obtain the transformed data from the Parquet format. This data can be used for further analysis, visualization, or downstream processing.
 
 By employing this pipeline, we can efficiently extract data from a MySQL database, store it in the CSV format for easy accessibility, convert it to the optimized Parquet format for efficient processing, perform transformations on the Parquet data, and obtain the desired output for subsequent use or analysis.
 
