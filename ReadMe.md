@@ -35,7 +35,7 @@ REQUIRED LIBRARIES:
 3)tkinter: It is a standard Python library for creating GUIs. Usually, it is already included with Python installations, but if you don't have it, you can install it using your package manager or follow platform-specific instructions.
 
 DATASET :
-i will provide a link for dataset
+contact me for dataset.
 
 Contact:
 EMAIL:haricse0808@gmail.com
