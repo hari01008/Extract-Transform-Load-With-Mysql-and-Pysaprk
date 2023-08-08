@@ -1,41 +1,46 @@
-In this data processing pipeline, we extract data from a MySQL database and store it as a CSV file. Subsequently, we convert the CSV file to the Parquet format and perform transformations on the data. Finally, we obtain the transformed data from the Parquet format.
+# MySQL Data Extraction, Transformation, and Loading (ETL) Pipeline with PySpark
 
-Here is a revised description of the steps involved:
+Explore an end-to-end ETL pipeline where we extract data from a MySQL database, store it as CSV, transform it using PySpark, and obtain the final output from Parquet format.
 
-1. Extraction: The process begins by extracting data from the MySQL database. This entails connecting to the database, executing appropriate SQL queries, and retrieving the data.
+## Overview
 
-2. CSV Storage: Once the data is extracted, we store it in the CSV format. This step allows us to have a structured representation of the data that can be easily accessed and manipulated.
+This data processing pipeline encompasses the following steps:
 
-3. Conversion to Parquet: After storing the data as a CSV file, we convert it to the Parquet format. Parquet offers advantages such as efficient compression, columnar storage, and schema evolution support, making it a suitable choice for data processing and analysis.
+1. **Extraction:** Connect to a MySQL database, execute SQL queries, and retrieve data for processing.
 
-4. Transformation: Once the data is in the Parquet format, we perform the required transformations on it. This step involves using PySpark or other compatible tools to apply operations such as filtering, aggregations, joins, or any other transformations necessary to derive the desired output.
+2. **CSV Storage:** Store the extracted data in CSV format for structured representation.
 
-   The operations performed :
-   1)Date format change (mm-dd-yyyy)to(yyyy-mm-dd)
-   2)concatenate data from two column to one column
-   3)split string from one column to two column
-   4)drop one or more columns
+3. **Conversion to Parquet:** Convert the CSV data to Parquet format, leveraging its efficiency and columnar storage benefits.
 
-10. Output from Parquet: After the transformations are complete, we obtain the transformed data from the Parquet format. This data can be used for further analysis, visualization, or downstream processing.
+4. **Transformation:** Use PySpark for data transformation operations, such as date format changes, concatenation, splitting, and column dropping.
 
-By employing this pipeline, we can efficiently extract data from a MySQL database, store it in the CSV format for easy accessibility, convert it to the optimized Parquet format for efficient processing, perform transformations on the Parquet data, and obtain the desired output for subsequent use or analysis.
+5. **Output from Parquet:** Obtain the transformed data from Parquet format, ready for analysis or downstream processing.
 
+## Transformation Operations
 
-HOW TO RUN THE PROJECT :
-1) First Install The Pyspark
-2) Then With the dataset import the dataset to the mysql workbench
-3)then install all the libraries required
-4)then run the all program seperately (extract,transform,load)
-5)if u want GUI run the (app.py)
+The transformation phase involves the following operations:
 
+1. Date Format Change: Convert dates from mm-dd-yyyy to yyyy-mm-dd.
+2. Column Concatenation: Combine data from two columns into a single column.
+3. String Split: Divide a string from one column into two columns.
+4. Column Dropping: Remove one or more columns from the dataset.
 
-REQUIRED LIBRARIES:
-1)pyspark: Install using pip install pyspark.
-2)mysql-connector-java: Download the MySQL Connector/J driver JAR file from the official MySQL website (https://dev.mysql.com/downloads/connector/j/) and add it to your project's classpath or specify the path to the JAR file in the code.
-3)tkinter: It is a standard Python library for creating GUIs. Usually, it is already included with Python installations, but if you don't have it, you can install it using your package manager or follow platform-specific instructions.
+## How to Run the Project
 
-DATASET :
-contact me for dataset.
+1. **Install PySpark:** Begin by installing PySpark using `pip install pyspark`.
 
-Contact:
-EMAIL:haricse0808@gmail.com
+2. **Setup MySQL:** Import the provided dataset into MySQL Workbench.
+
+3. **Install Required Libraries:** Ensure you have `mysql-connector-java` and `tkinter` libraries installed. Download the MySQL Connector/J driver JAR file from the official MySQL website and add it to your classpath.
+
+4. **Run Programs:** Execute each program separately: `extract.py` for data extraction, `transform.py` for transformations, and `load.py` for loading data into Parquet.
+
+5. **GUI Option:** To use a GUI interface, run `app.py`.
+
+## Dataset
+
+For access to the dataset, please contact me.
+
+## Contact
+
+Feel free to reach out with any questions or collaboration opportunities at haricse0808@gmail.com.
